@@ -1,16 +1,16 @@
 import React from "react";
-import "./styles.css";
+import "./ShopCard.css";
 
-function ShopCard({ item }) {
+export default function ShopCard({ product }) {
   return (
     <div className="shop-card">
-      <img src={item.img} alt={item.name} className="card-img"/>
-      <h3>{item.name}</h3>
-      <p>{item.color}</p>
-      <div className="price">${item.price}</div>
-      <button className="buy-btn">Купить</button>
+      <h3>{product.name}</h3>
+      <p>{product.color}</p>
+      <img src={product.img} alt={product.name} />
+      <div className="price-button-container">
+        <div className="price">${product.price}</div>
+        <button className="add-to-cart">ADD TO CART</button>
+      </div>
     </div>
   );
 }
-
-export default ShopCard;

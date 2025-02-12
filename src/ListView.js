@@ -1,15 +1,13 @@
 import React from "react";
 import ShopItem from "./ShopItem";
-import "./styles.css";
+import "./ListView.css";
 
-function ListView({ items }) {
+export default function ListView({ items }) {
   return (
     <div className="list-view">
       {items.map((item, index) => (
-        <ShopItem key={index} item={item} />
+        <ShopItem key={index} product={item} />
       ))}
     </div>
   );
 }
-
-export default ListView;

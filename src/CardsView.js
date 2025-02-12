@@ -1,15 +1,13 @@
 import React from "react";
 import ShopCard from "./ShopCard";
-import "./styles.css";
+import "./CardsView.css";
 
-function CardsView({ cards }) {
+export default function CardsView({ cards }) {
   return (
     <div className="cards-view">
       {cards.map((card, index) => (
-        <ShopCard key={index} item={card} />
+        <ShopCard key={index} product={card} />
       ))}
     </div>
   );
 }
-
-export default CardsView;

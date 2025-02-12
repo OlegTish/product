@@ -1,18 +1,18 @@
 import React from "react";
-import "./styles.css";
+import "./ShopItem.css";
 
-function ShopItem({ item }) {
+export default function ShopItem({ product }) {
   return (
     <div className="shop-item">
-      <img src={item.img} alt={item.name} className="list-img"/>
+      <img src={product.img} alt={product.name} />
       <div className="info">
-        <h3>{item.name}</h3>
-        <p>{item.color}</p>
+        <h3>{product.name}</h3>
+        <p>{product.color}</p>
       </div>
-      <div className="price">${item.price}</div>
-      <button className="buy-btn">Купить</button>
+      <div className="price-button-container">
+        <div className="price">${product.price}</div>
+        <button className="add-to-cart">ADD TO CART</button>
+      </div>
     </div>
   );
 }
-
-export default ShopItem;
